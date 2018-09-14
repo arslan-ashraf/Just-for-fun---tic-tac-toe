@@ -1,0 +1,26 @@
+.board {
+	width: 600px;
+	height: 600px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	box-sizing: border-box;
+}
+
+.cell {
+	height: 200px;
+	width: 200px;
+	font-size: 40px;
+	box-sizing: border-box;
+	border: 5px solid black;
+	background: lightblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cell:hover {
+	background: grey;
+	cursor: pointer;
+}
