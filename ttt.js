@@ -7,7 +7,7 @@ let winning_combinations = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8]
 board.addEventListener('click', function(e){
 	e.target.innerHTML = current_turn
 	current_turn = current_turn == player_one ? player_two : player_one
-	if (check_winner()) alert('someone won')
+	if (check_winner()) alert('game over')
 })
 
 function check_winner(){
@@ -15,7 +15,6 @@ function check_winner(){
 	let location = cells.map(function(cell){
 		return cell.innerHTML
 	})
-	console.log(location)
 	for(let i = 0; i < winning_combinations.length; i++){
 		let combo = winning_combinations[i]
 		if (location[combo[0]] == location[combo[1]] && location[combo[1]] == location[combo[2]] 
